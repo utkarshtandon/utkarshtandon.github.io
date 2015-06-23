@@ -1,0 +1,50 @@
+#header{
+	font-family:"Bebas";
+	font-weight: 50;
+	color: red;
+	font-size:70px;
+
+}
+
+html {
+	background-image: url('back3.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    background-size: 2000px;
+
+}
+
+#instruct{
+	font-family:"HelveticaNeue-Light","OpenSans-Regular","OpenSans-Light";
+	color:white;
+	font-size:20px;
+	width:50%;
+	line-height: 30px;
+	text-shadow: 1px 1px black;
+
+}
+
+#upload{
+	height:50px;
+	width:300px;
+	background-color:#2D9CFC;
+	border-radius: 25px;
+	margin-top:80px;
+}
+
+#uploadtext{
+	font-family:"Bebas";
+	font-weight: 50;
+	color: white;
+	font-size:20px;
+}
+
+#upload:hover { 
+    background-color: white;
+}
+
+#upload:hover #uploadtext {
+    color:#2D9CFC;
+}
+
