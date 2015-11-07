@@ -1,26 +1,66 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link type="text/css" rel="stylesheet" href="gmcpweb.css"/>
-		<title>GMCP Tracker</title>
+		<link type="text/css" rel="stylesheet" href="onering.css"/>
+		<title>OneRing | Artificial Intelligence for Parkinson's Disease</title>
+		<link rel="shortcut icon" href="favicon.ico"/>
 
 		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 		<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
 		<script>
+		
 		$(document).ready(function(){
-			$( "#upload" ).click(function() {
-				alert("clicked")
-			});	
+			$( "#backimg" ).fadeIn(1300);
+			setTimeout(function(){
+				$("#logo").animate({"margin-top" : "200px"},1000);
+				setTimeout(function(){
+				  $( "#slogan" ).fadeIn(1000);
+				  $( "#kick" ).fadeIn(1000);
+				  setTimeout(function(){
+				  	//$("#topkick").animate({"margin-top" : "100px"},800);
+				  	$( "#technology" ).slideDown("slow");
+				  	setTimeout(function(){
+					  	$( "#features" ).slideDown("slow");
+					  	setTimeout(function(){
+					  		$( "#topkick" ).slideDown("slow");
+					  	}, 250);
+				  	}, 250);
+				  }, 500);
+				}, 1000);
+			}, 700);
+				
+				
+
+			$("#kick").hover(function(){
+			    $(this).css("background-color", "#75FFB7");
+			    }, function(){
+			    $(this).css("background-color", "#22c972");
+			});
 		});
+
 		</script>
 	</head>
 	<body>
-		<center><p id="header">GMCP Tracker</p></center>
-		<center><p id="instruct">Upload a video below and watch the GMCP algorithm separately track each human.</p></center>
-		<center>
-			<div id="upload">
-				<p id="uploadtext" style="padding-top:12px">UPLOAD</p>
-			</div>
-		</center>
+		
+		<div id="backimg" style="background-image: url(rotatedrings2.png); background-size: 103% 650px; margin-left:-10px;margin-top:-55px;width:103%;height:650px;display:none;min-width:1400px;background-repeat: no-repeat;background-position: center; ">
+			<!--<center><p style="font-family:HelveticaNeue-UltraLight;font-size:55px;padding-top:200px;">OneRing</p></center>-->
+
+			<p id="technology" style="position:absolute;font-family:gothambook;font-size:14px;margin-top:100px;margin-left:980px;display:none;">Technology</p>
+			<p id="features" style="position:absolute;font-family:gothambook;font-size:14px;margin-top:100px;margin-left:1100px;display:none;">Features</p>
+			<img id="topkick" src="kickstarter.png" style="position:absolute;width:110px;margin-left:1200px;margin-top:99px;display:none;">
+			<center><img id="logo" src="ringlogo.png" style="width:150px;margin-top:-50px;"></center>
+			<center><p id ="slogan" style="font-family:HelveticaNeue-UltraLight;font-size:20px;width:350px;padding-top:80px;line-height:35px;display:none;">Monitoring <strong>Parkinson's Disease</strong> through Artificial Intelligence.</p></center>
+
+			<center><div id="kick" style="height:45px;margin-top:80px;width:300px;background-color:#22c972;display:none;border-radius:18px;">
+			<p style="font-family:gothambook;font-size:15px;color:white;display:inline-block;vertical-align:top;margin-top:17px;"><strong>Back us on</strong></p>
+			<img src="kickstarter2.png" style="width:120px;display:inline-block;vertical-align:top;margin-top:16px;margin-left:2px;">
+			</div></center>
+
+
+		</div>
+
+		<!--<center><p style="font-family:OpenSans-Light;font-size:30px;margin-top:50px;">The Power of Signal Processing and AI</p><center>-->
+	    
 	</body>
 </html>
