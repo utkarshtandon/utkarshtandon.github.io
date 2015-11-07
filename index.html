@@ -24,7 +24,9 @@
 					  	$( "#features" ).slideDown("slow");
 					  	setTimeout(function(){
 					  		$( "#topkick" ).slideDown("slow");
-					  		$( "#power" ).fadeIn(700);
+					  		setTimeout(function(){
+						  		$( "#power" ).fadeIn(700);
+						  	}, 250);
 					  	}, 250);
 				  	}, 250);
 				  }, 500);
