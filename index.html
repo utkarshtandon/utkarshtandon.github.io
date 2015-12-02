@@ -7,10 +7,12 @@
 
 		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 		<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-
+		<script src="sweetalert.min.js"></script> 
+		<link rel="stylesheet" type="text/css" href="sweetalert.css">
 		<script>
 		
 		$(document).ready(function(){
+			$('body').addClass('stop-scrolling')
 			$( "#backimg" ).fadeIn(1300);
 			setTimeout(function(){
 				$("#logo").animate({"margin-top" : "200px"},1000);
@@ -26,44 +28,150 @@
 					  		$( "#topkick" ).slideDown("slow");
 					  		setTimeout(function(){
 						  		$( "#power" ).fadeIn(1000);
+						  		$('body').removeClass('stop-scrolling')
 						  	}, 300);
 					  	}, 250);
 				  	}, 250);
 				  }, 500);
 				}, 1000);
 			}, 700);
+			
 				
-				
-
 			$("#kick").hover(function(){
 			    $(this).css("background-color", "#75FFB7");
 			    }, function(){
 			    $(this).css("background-color", "#22c972");
 			});
-		});
 
+			$("#install").hover(function(){
+			    $(this).css("background-color", "#17BDFF");
+			    }, function(){
+			    $(this).css("background-color", "#00B3FF");
+			});
+
+			$("#readmore").hover(function(){
+			    $(this).css("background-color", "#F0F0F0");
+			    }, function(){
+			    $(this).css("background-color", "#E8E8E8");
+			});
+
+
+			$("#install").click(function() {
+  				window.location.href='https://itunes.apple.com/us/app/onering-artificial-intelligence/id1058625345?ls=1&mt=8';
+  			});
+
+  			$("#kick").click(function() {
+  				/*
+  				swal("Kickstarter Campaign", "We are excited to announce that we will be launching a Kickstarter campaign in late December. All updates regarding our campaign will be posted on this website. We look forward to seeing your support!");*/
+
+  				swal({   title: "Our Campaign",   text: "We are excited to announce that we will be launching a Kickstarter campaign in late December. All updates regarding our campaign will be posted on this website. We look forward to seeing your support!",   imageUrl: "kickstarter.png" , imageSize: "300x100"});
+  			});
+
+
+			$("#readmore").click(function() {
+  				swal("Technology", "If you want to learn more about the algorithms behind OneRing or have general comments/questions just shoot an email to utkarsh.tandon1@gmail.com");
+  			});
+  			});
 		</script>
+
+		<style>
+			.stop-scrolling {
+			  height: 100%;
+			  overflow: hidden;
+			}
+
+			@font-face {
+			    font-family: gotham;
+			    src: url(ufonts.com_gotham-book-webfont.woff);
+			}
+
+			@font-face {
+			    font-family: opensans;
+			    src: url(opensans-light-webfont.woff);
+			}
+
+			@font-face {
+			    font-family: opensansreg;
+			    src: url(opensans-regular-webfont.woff);
+			}
+
+			@font-face {
+			    font-family: helveticaultralight;
+			    src: url(helveticaneue-ultralight-webfont.woff);
+			}
+
+
+			
+		</style>
 	</head>
 	<body style="min-width:1400px;">
 		
 		<div id="backimg" style="background-image: url(rotatedrings2.png); background-size: 103% 650px; margin-left:-10px;margin-top:-55px;width:103%;height:650px;display:none;min-width:1400px;background-repeat: no-repeat;background-position: center; ">
 			<!--<center><p style="font-family:HelveticaNeue-UltraLight;font-size:55px;padding-top:200px;">OneRing</p></center>-->
 
-			<p id="technology" style="position:absolute;font-family:gothambook;font-size:14px;margin-top:100px;margin-left:980px;display:none;">Technology</p>
-			<p id="features" style="position:absolute;font-family:gothambook;font-size:14px;margin-top:100px;margin-left:1100px;display:none;">Features</p>
+			<p id="technology" style="position:absolute;font-family:gotham;font-size:14px;margin-top:97px;margin-left:980px;display:none;">Technology</p>
+			<p id="features" style="position:absolute;font-family:gotham;font-size:14px;margin-top:97px;margin-left:1100px;display:none;">Features</p>
 			<img id="topkick" src="kickstarter.png" style="position:absolute;width:110px;margin-left:1200px;margin-top:99px;display:none;">
 			<center><img id="logo" src="ringlogo.png" style="width:150px;margin-top:-50px;"></center>
-			<center><p id ="slogan" style="font-family:HelveticaNeue-UltraLight;font-size:20px;width:350px;padding-top:80px;line-height:35px;display:none;">Monitoring <strong>Parkinson's Disease</strong> through Artificial Intelligence.</p></center>
+			<center><p id ="slogan" style="font-family:HelveticaNeue-Ultralight,sans-serif;font-size:20px;width:350px;padding-top:80px;line-height:35px;display:none;">Monitoring <strong>Parkinson's Disease</strong> through Artificial Intelligence.</p></center>
 
 			<center><div id="kick" style="height:45px;margin-top:80px;width:300px;background-color:#22c972;display:none;border-radius:18px;">
-			<p style="font-family:gothambook;font-size:15px;color:white;display:inline-block;vertical-align:top;margin-top:17px;"><strong>Back us on</strong></p>
+			<p style="font-family:gotham;font-size:15px;color:white;display:inline-block;vertical-align:top;margin-top:14px;"><strong>Back us on</strong></p>
 			<img src="kickstarter2.png" style="width:120px;display:inline-block;vertical-align:top;margin-top:16px;margin-left:2px;">
 			</div></center>
 
 
 		</div>
+		<div style="background-color:white;width:100%;height:150px;">
+		<center><p id="power" style="font-family:opensans;font-weight:300;font-size:33px;margin-top:-0px;padding-top:80px;margin-left:15px;display:none;">The power of medical machine learning.</p></center>
+		</div>
 
-		<center><p id="power" style="font-family:OpenSans-Light;font-size:30px;margin-top:70px;display:none;">The Power of Medical Machine Learning</p></center>
-	    
+		<center>
+		<img id="signal" style="width:110px;display:inline-block;vertical-align:top;margin-right:285px;margin-top:40px;" src="signal.png">
+
+		<img id="brain" style="width:110px;display:inline-block;vertical-align:top;margin-top:40px;" src="brain.png">
+
+		<img id="report" style="width:90px;display:inline-block;vertical-align:top;margin-left:305px;margin-top:50px;" src="report.png">
+	    </center>
+
+	    <center>
+
+	    <p style="font-family:opensansreg;color:#5C5C5C;font-size:18px;display:inline-block;vertical-align:top;margin-right:140px;"><strong>Intelligent Signal Processing</strong></p>
+
+	    <p style="font-family:opensansreg;color:#5C5C5C;font-size:18px;display:inline-block;vertical-align:top;padding-right:60px;"><strong>Powerful Machine Learning Tech</strong></p>
+
+	    <p style="font-family:opensansreg;color:#5C5C5C;font-size:18px;display:inline-block;vertical-align:top;margin-left:110px;"><strong>Smart Patient Reports</strong></p>
+
+	    </center>
+
+	    <center>
+	    <div style="margin-left:40px;">
+	    <p style="font-family:opensansreg; font-weight:400; color:#5C5C5C; width:300px; font-size:14px; line-height:25px;display:inline-block;vertical-align:top;text-align:left;margin-right:100px;">OneRing is based on our patent-pending signal processing engine for modeling various Parkinson's movement patterns including dyskinesia, bradykinesia, and tremor.</p>
+
+	    <p style="font-family:opensansreg; font-weight:400; color:#5C5C5C; width:300px; font-size:14px; line-height:25px;display:inline-block;vertical-align:top;text-align:left;">Our AI technology + learning algorithms have been trained to automatically classify PD severity. Powerful stuff.</p>
+
+	    <p style="font-family:opensansreg; font-weight:400; color:#5C5C5C; width:300px; font-size:14px; line-height:25px;display:inline-block;vertical-align:top;text-align:left;margin-left:100px;">OneRing produces daily patient reports with time-stamped analytics allowing physicians to better prescribe medications.</p>
+		</div>
+	    </center>
+
+
+	    <center>
+    	<div id="install" style="height:57px;margin-top:60px;width:202px;background-color:#00B3FF;border-radius:18px;display:inline-block;vertical-align:top;margin-right:10px;border:">
+    		<img src="ioslogo.png" style="width:18px;display:inline-block;vertical-align:top;margin-top:14px;margin-right:10px;">
+    		<p style="font-family:gotham;font-size:15px;color:white;display:inline-block;vertical-align:top;margin-top:21px;"><strong>Install for iOS</strong></p>
+	    </div>
+	    <div id="readmore" style="height:55px;margin-top:60px;width:300px;background-color:#E8E8E8;display:inline-block;vertical-align:top;border-radius:18px;border: 1px solid #ADADAD;">
+    		<center><p style="font-family:gotham;font-size:15px;color:#7D7D7D;margin-top:20px;margin-left:2px;"><strong>Learn more about Technology</strong></p>
+	    </div>
+		</center>
+
+		<center>
+			<div id="line" style="height:1px;background-color:#E8E8E8; margin-top:40px; width:1000px;"></div>
+		</center>
+
+
+		<center><iframe style="margin-top:50px;" width="1120" height="630" src="http://www.youtube.com/embed/O9X73FRCyto" frameborder="0" allowfullscreen></iframe></center>
+
+
 	</body>
 </html>
