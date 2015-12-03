@@ -19,6 +19,7 @@
 				setTimeout(function(){
 				  $( "#slogan" ).fadeIn(1000);
 				  $( "#kick" ).fadeIn(1000);
+				  $( "#watch" ).fadeIn(1000);
 				  setTimeout(function(){
 				  	//$("#topkick").animate({"margin-top" : "100px"},800);
 				  	$( "#technology" ).slideDown("slow");
@@ -64,14 +65,26 @@
   				/*
   				swal("Kickstarter Campaign", "We are excited to announce that we will be launching a Kickstarter campaign in late December. All updates regarding our campaign will be posted on this website. We look forward to seeing your support!");*/
 
-  				swal({   title: "Our Campaign",   text: "We are excited to announce that we will be launching a Kickstarter campaign in late December. All updates regarding our campaign will be posted on this website. We look forward to seeing your support!",   imageUrl: "kickstarter.png" , imageSize: "300x100"});
+  				swal({   title: "Our Campaign",   text: "We are excited to announce that we will be launching a Kickstarter campaign in late December. All updates regarding our campaign will be posted on this website. We plan to make OneRing available for order early next year when our campaign ends. We look forward to seeing your support!",   imageUrl: "kickstarter.png" , imageSize: "300x100"});
   			});
 
 
 			$("#readmore").click(function() {
   				swal("Technology", "If you want to learn more about the algorithms behind OneRing or have general comments/questions just shoot an email to utkarsh.tandon1@gmail.com");
   			});
+
+  			$("#toclick").click(function() {
+  				swal({   title: '<iframe width="445" height="250" src="http://www.youtube.com/embed/O9X73FRCyto" frameborder="0" allowfullscreen></iframe>', html: true });
   			});
+
+  			$("#alsoclick").click(function() {
+  				swal({   title: '<iframe width="445" height="250" src="http://www.youtube.com/embed/O9X73FRCyto" frameborder="0" allowfullscreen></iframe>', html: true });
+  			});
+
+
+  			});
+
+
 		</script>
 
 		<style>
@@ -115,13 +128,17 @@
 			<center><img id="logo" src="ringlogo.png" style="width:150px;margin-top:-50px;"></center>
 			<center><p id ="slogan" style="font-family:HelveticaNeue-Ultralight,sans-serif;font-size:20px;width:350px;padding-top:80px;line-height:35px;display:none;">Monitoring <strong>Parkinson's Disease</strong> through Artificial Intelligence.</p></center>
 
-			<center><div id="kick" style="height:45px;margin-top:80px;width:300px;background-color:#22c972;display:none;border-radius:18px;">
-			<p style="font-family:gotham;font-size:15px;color:white;display:inline-block;vertical-align:top;margin-top:14px;"><strong>Back us on</strong></p>
+			<center> <div id="watch" style="height:50px;margin-top:20px;width:300px;display:none;"><img id = "alsoclick" src="play.png" style="cursor: pointer;width:30px;display:inline-block;vertical-align:top;margin-top:16px;"> <p id ="toclick" style="cursor: pointer;font-family:HelveticaNeue-Ultralight,sans-serif;font-size:18px;display:inline-block;vertical-align:top;color:#00A0D1;margin-top:21px;margin-left:4px;">Watch Video</p></div> </center>
+
+			<center><div id="kick" style="cursor: pointer;height:45px;margin-top:35px;width:300px;background-color:#22c972;display:none;border-radius:18px;">
+			<p style="font-family:gotham;font-size:14px;color:white;display:inline-block;vertical-align:top;margin-top:14px;"><strong>Back us on</strong></p>
 			<img src="kickstarter2.png" style="width:120px;display:inline-block;vertical-align:top;margin-top:16px;margin-left:2px;">
 			</div></center>
 
 
 		</div>
+
+		
 		<div style="background-color:white;width:100%;height:150px;">
 		<center><p id="power" style="font-family:opensans;font-weight:300;font-size:33px;margin-top:-0px;padding-top:80px;margin-left:15px;display:none;">The power of medical machine learning.</p></center>
 		</div>
@@ -133,6 +150,7 @@
 
 		<img id="report" style="width:90px;display:inline-block;vertical-align:top;margin-left:305px;margin-top:50px;" src="report.png">
 	    </center>
+	    
 
 	    <center>
 
@@ -156,11 +174,11 @@
 
 
 	    <center>
-    	<div id="install" style="height:57px;margin-top:60px;width:202px;background-color:#00B3FF;border-radius:18px;display:inline-block;vertical-align:top;margin-right:10px;border:">
+    	<div id="install" style="cursor: pointer;height:57px;margin-top:60px;width:202px;background-color:#00B3FF;border-radius:18px;display:inline-block;vertical-align:top;margin-right:10px;border:">
     		<img src="ioslogo.png" style="width:18px;display:inline-block;vertical-align:top;margin-top:14px;margin-right:10px;">
     		<p style="font-family:gotham;font-size:15px;color:white;display:inline-block;vertical-align:top;margin-top:21px;"><strong>Install for iOS</strong></p>
 	    </div>
-	    <div id="readmore" style="height:55px;margin-top:60px;width:300px;background-color:#E8E8E8;display:inline-block;vertical-align:top;border-radius:18px;border: 1px solid #ADADAD;">
+	    <div id="readmore" style="cursor: pointer;height:55px;margin-top:60px;width:300px;background-color:#E8E8E8;display:inline-block;vertical-align:top;border-radius:18px;border: 1px solid #ADADAD;">
     		<center><p style="font-family:gotham;font-size:15px;color:#7D7D7D;margin-top:20px;margin-left:2px;"><strong>Learn more about Technology</strong></p>
 	    </div>
 		</center>
@@ -171,6 +189,17 @@
 
 
 		<center><iframe style="margin-top:50px;" width="1120" height="630" src="http://www.youtube.com/embed/O9X73FRCyto" frameborder="0" allowfullscreen></iframe></center>
+
+
+		<div id="greyback" style="width:103%; height:775px; margin-top:50px; margin-left:-10px;background-color:#525252; ">
+			<center><p style="font-family: 'Open Sans'; font-weight: 400;color: #fff;font-size: 30px;padding-top:35px;">Quantifying Parkinson's With Intelligent Analytics.</p></center>
+
+			<center> <img style="width:800px;"src="threescreens.png"></center>
+
+			<center><p style="font-weight:300; font-family:OpenSans-Light; font-size:17px; padding-top:10px; width:900px;color:white;"> With our iOS app, OneRing creates a whole new way for phyisicans and Parkinson's patients to interact. Movement data collected over the span of a day is analyzed and generated reports are immediately sent to the physician. They can then alter their medication prescriptions to better suit their patient based on PD movement severities at every hour of the day.</p><center>
+
+
+		</div>
 
 
 	</body>
