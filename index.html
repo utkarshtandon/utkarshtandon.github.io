@@ -28,9 +28,29 @@
 					  	setTimeout(function(){
 					  		$( "#topkick" ).slideDown("slow");
 					  		setTimeout(function(){
-						  		$( "#power" ).fadeIn(1000);
-						  		$('body').removeClass('stop-scrolling')
+					  			$("#articletab").animate({"width" : "103%"},1000);
 						  	}, 300);
+						  		setTimeout(function(){
+						  			$( "#asfeatured" ).fadeIn(1000);
+						  			setTimeout(function(){
+						  				$( "#fast" ).fadeIn(1000);
+						  				setTimeout(function(){
+						  					$( "#nbc" ).fadeIn(1000);
+						  					setTimeout(function(){
+						  						$( "#digital" ).fadeIn(1000);
+						  						setTimeout(function(){
+						  							$( "#scoop" ).fadeIn(1000);
+						  							setTimeout(function(){
+						  								$( "#visual" ).fadeIn(1000);
+								  						$( "#power" ).fadeIn(1000);
+								  						$('body').removeClass('stop-scrolling')
+								  					}, 300);
+						  						}, 300);
+						  					}, 300);
+						  				}, 300);
+						  			}, 300);
+							  		
+							  	}, 300);
 					  	}, 250);
 				  	}, 250);
 				  }, 500);
@@ -56,6 +76,27 @@
 			$("#install").click(function() {
   				window.location.href='https://itunes.apple.com/us/app/onering-artificial-intelligence/id1058625345?ls=1&mt=8';
   			});
+
+
+			$("#fast").click(function() {
+  				window.location.href='http://www.fastcodesign.com/3056181/innovation-by-design/high-school-kid-develops-a-wearable-device-for-parkinsons-patients';
+  			});
+  			$("#nbc").click(function() {
+  				window.location.href='http://www.nbcbayarea.com/news/local/Cupertino-High-Student-Creates-Wearable-Device-For-Parkinsons-Patients-366765451.html';
+  			});
+  			$("#digital").click(function() {
+  				window.location.href='http://www.digitaltrends.com/cool-tech/high-school-student-invents-onering-parkinsons-wearable/';
+  			});
+  			$("#scoop").click(function() {
+  				window.location.href='https://www.scoopwhoop.com/Watch-This-High-School-Student-Came-Up-With-A-Ring-To-Treat-Parkinsons-Disease-More-Effectively/';
+  			});
+  			$("#visual").click(function() {
+  				window.location.href='https://www.visualnews.com/2016/02/17/15-year-old-revolutionizing-treatement-parkinsons-patients/';
+  			});
+
+
+
+
   			$("#kick").click(function() {
   				/*
   				swal("Kickstarter Campaign", "We are excited to announce that we will be launching a Kickstarter campaign in late December. All updates regarding our campaign will be posted on this website. We look forward to seeing your support!");*/
@@ -100,25 +141,14 @@
 	</head>
 	<body style="min-width:1400px;">
 		
-		<center>
-			<div id="tribute" style="height:600px; background-color:white; margin-left:-10px;width:103%;;">
-				<p id="atribute" style="font-family:opensans;font-weight:300;font-size:33px;padding-top:50px;">Tribute to Muhammad Ali</p>
-				<div id="line" style="height:1px;background-color:black; margin-top:-30px; width:350px;"></div>
-				<img src="alitribute.png" style="width:1100px;margin-top:30px;">
-				<!--
-				<img src="alipicture.jpg" style="width:700px;float:left; margin-left:35px;margin-top:20px;">
-				<p id="texttribute" style="float:right;font-weight:300; font-family:opensans; font-size:20px;margin-right:300px;padding-top:0px;">Inspired OneRing.</p>
-				<p id="texttribute2" style="float:right;font-weight:300; font-family:opensans; font-size:20px;margin-right:140px;padding-top:50px;">Inspired the world.</p>
-				<p id="texttribute3" style="float:right;font-weight:300; font-family:opensans; font-size:20px;margin-right:75px;padding-top:50px;">Muhammad Ali, you will forever be remembered.</p>-->
-			</div>
-		</center>
 		
-		<div id="backimg" style="background-image: url(rotatedrings2.jpg); background-size: 103% 650px; margin-left:-10px;width:103%;height:650px;display:none;min-width:1400px;background-repeat: no-repeat;background-position: center; ">
+		
+		<div id="backimg" style="background-image: url(rotatedrings2.jpeg); background-size: 103% 650px; margin-left:-10px;margin-top:-55px;width:103%;height:650px;display:none;min-width:1400px;background-repeat: no-repeat;background-position: center; ">
 			<!--<center><p style="font-family:HelveticaNeue-UltraLight;font-size:55px;padding-top:200px;">OneRing</p></center>-->
 
-			<p id="technology" style="position:absolute;font-family:gotham;font-size:14px;margin-top:97px;margin-left:980px;display:none;">Technology</p>
-			<p id="features" style="position:absolute;font-family:gotham;font-size:14px;margin-top:97px;margin-left:1100px;display:none;">Features</p>
-			<img id="topkick" src="kickstarter.png" style="position:absolute;width:110px;margin-left:1200px;margin-top:99px;display:none;">
+			<p id="technology" style="position:absolute;font-family:gotham;font-size:14px;margin-top:97px;margin-left:980px;display:none;cursor:pointer;">Technology</p>
+			<p id="features" style="position:absolute;font-family:gotham;font-size:14px;margin-top:97px;margin-left:1100px;display:none;cursor:pointer;">Features</p>
+			<img id="topkick" src="kickstarter.png" style="position:absolute;width:110px;margin-left:1200px;margin-top:99px;display:none;cursor:pointer;">
 			<center><img id="logo" src="ringlogo.png" style="width:150px;margin-top:0px;"></center>
 			<center><p id ="slogan" style="font-family:HelveticaNeue-Ultralight,sans-serif;font-size:20px;width:350px;padding-top:80px;line-height:35px;display:none;">Monitoring <strong>Parkinson's Disease</strong> through Artificial Intelligence.</p></center>
 
@@ -131,6 +161,16 @@
 
 
 		</div>
+
+		<div id="articletab" style="width:0;background-color:#BFBFBF;height:80px;margin-left:-10px;vertical-align:top;">
+			<div id="asfeatured" style="color:white;font-family:gotham;font-weight:300;font-size:20px;padding-top:25px;margin-left:195px;display:none;">As featured on:</div>
+			<img src="fastcompany.png" id="fast" style="padding-top:20px;float:left;display:none;width:245px; margin-left:395px;margin-top:-53px;cursor:pointer;">
+			<img src="NBCLogo.png" id="nbc" style="padding-top:20px;float:left;display:none;width:75px; margin-left:30px;margin-top:-65px;cursor:pointer;">
+			<img src="digitaltrends.png" id="digital" style="padding-top:20px;float:left;display:none;width:210px; margin-left:30px;margin-top:-70px;cursor:pointer;">
+			<img src="scoopwhoop.png" id="scoop" style="padding-top:20px;float:left;display:none;width:70px; margin-left:30px;margin-top:-62px;cursor:pointer;">
+			<img src="visualnews.png" id="visual" style="padding-top:20px;float:left;display:none;width:120px; margin-left:30px;margin-top:-63px;cursor:pointer;">
+		</div>
+
 
 		
 		<div style="background-color:white;width:100%;height:150px;">
@@ -232,6 +272,23 @@
 
 		</div>
 
+		<center>
+			<div id="tribute" style="height:600px; background-color:white; margin-left:-10px;width:103%;;">
+				<p id="atribute" style="font-family:opensans;font-weight:300;font-size:33px;padding-top:50px;">Tribute to Muhammad Ali</p>
+				<div id="line" style="height:1px;background-color:black; margin-top:-30px; width:350px;"></div>
+				<img src="alitribute.png" style="width:1100px;margin-top:30px;">
+				<!--
+				<img src="alipicture.jpg" style="width:700px;float:left; margin-left:35px;margin-top:20px;">
+				<p id="texttribute" style="float:right;font-weight:300; font-family:opensans; font-size:20px;margin-right:300px;padding-top:0px;">Inspired OneRing.</p>
+				<p id="texttribute2" style="float:right;font-weight:300; font-family:opensans; font-size:20px;margin-right:140px;padding-top:50px;">Inspired the world.</p>
+				<p id="texttribute3" style="float:right;font-weight:300; font-family:opensans; font-size:20px;margin-right:75px;padding-top:50px;">Muhammad Ali, you will forever be remembered.</p>-->
+			</div>
+		</center>
+
+		<img src="kickstartercoveronering2.png" style="width:103%;margin-top:10px;margin-bottom:-10px">
+
+
 
 	</body>
 </html>
+
